@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="SQLDemo.Pages.DashboardPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:vm="clr-namespace:SQLDemo.ViewModel"
+    ios:Page.UseSafeArea="True">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Name" />
+            <Entry Text="{Binding Name}" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="My Name is" />
+                <Label Text="{Binding Name}" />
+            </StackLayout>
+            <Label Text="Address" />
+            <Entry Text="{Binding Adddress}" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="My Address is" />
+                <Label Text="{Binding Adddress}" />
+            </StackLayout>
+
+            <Button Command="{Binding SaveCommand}" Text="Save" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
